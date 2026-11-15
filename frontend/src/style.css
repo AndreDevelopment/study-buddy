@@ -1,0 +1,48 @@
+.modern-btn {
+  /* Layout & Sizing */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Perfect spacing if you add an icon */
+  padding: 10px 20px;
+  
+  /* Typography */
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  
+  /* Borders & Styling */
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* Modern Depth & Smooth Transitions */
+  background-color: #2563eb; /* Default color (e.g., Primary Blue) */
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect: Lifts slightly and enhances shadow */
+.modern-btn:hover {
+  filter: brightness(1.1); /* Automatically shifts your base color slightly lighter */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Active/Press Effect: Compresses back down */
+.modern-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  filter: brightness(0.95); /* Slightly darkens on click */
+}
+
+/* Disabled State */
+.modern-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  filter: none;
+}

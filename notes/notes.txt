@@ -1,0 +1,33 @@
+Machine Learning (ML) is a branch of artificial intelligence where computers learn from data to make decisions or predictions without being explicitly programmed.
+
+There are two main types of learning in ML:
+
+Supervised Learning: The model is trained on labeled data, meaning it learns from input-output pairs to predict outcomes for new data.
+Unsupervised Learning: The model is given data without labels and must find patterns or groupings on its own.
+Supervised Learning
+There are two main types of task in supervised learning:
+
+Regression model predicts a continuous value. For example, predicting house prices based on features like location and size. Algorithms: simple linear regression, multiple linear regression.
+Classification model predicts a category or class. For example, spam vs. non-spam emails. Algorithms: logistic regression, k-nearest neighbor, naïve bayes, linear discriminant analysis, support vector machine, decision tree
+
+Simple Linear Regression models the relationship between two variables by fitting a linear equation to the observed data. It predicts the value of a dependent variable based on the value of an independent variable. The relationship is represented as:Simple Linear Regression models the relationship between two variables by fitting a linear equation to the observed data. It predicts the value of a dependent variable based on the value of an independent variable. The relationship is represented as:
+Assumptions of Multiple Linear Regression:
+
+Same as simple linear regression.
+No multicollinearity (check using VIF).
+2. Logistic Regression
+Logistic Regression is used for binary classification problems, where the goal is to predict the probability of an outcome belonging to one of two classes. Unlike linear regression, which predicts continuous values, logistic regression predicts values between 0 and 1.
+Assumptions of Logistic Regression:
+
+Linearity between predictors and log-odds.
+Independent observations.
+No multicollinearity.
+3. K-Nearest Neighbors (KNN)
+K-Nearest Neighbors (KNN) works by finding k closet data points (neighbors) in the training dataset to make predictions. The distance between points is typically measured using Euclidean, Manhattan and Minkowski distance.
+
+Choosing k:
+
+A small value of k (e.g., k=1) makes the model sensitive to noise (overfitting).
+A large value of k smoothens the decision boundary but might underfit (too simplistic).
+Typically, odd values for k are chosen in binary classification to avoid ties.
+KNN is a lazy learning algorithm, meaning it does not learn a model during training but makes predictions by comparing test points to the entire training dataset.
