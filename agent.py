@@ -62,8 +62,8 @@ def initialize_agent():
     
     return agent_executor
 
+agent_executor = initialize_agent()
 if __name__ == "__main__":
-    agent = initialize_agent()
     print("\n--- RAG Agent Ready! ---")
     
     # Test query loop
@@ -74,7 +74,7 @@ if __name__ == "__main__":
             
         print("\nThinking...")
         # Invoke the LangGraph agent
-        response = agent.invoke({"messages": [("user", query)]})
+        response = agent_executor.invoke({"messages": [("user", query)]})
         
         # Print the final response from the agent's message history
         print("\nAnswer:")

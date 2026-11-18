@@ -1,48 +1,59 @@
-.modern-btn {
-  /* Layout & Sizing */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* Perfect spacing if you add an icon */
-  padding: 10px 20px;
-  
-  /* Typography */
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.5;
-  
-  /* Borders & Styling */
-  border: 1px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  
-  /* Modern Depth & Smooth Transitions */
-  background-color: #2563eb; /* Default color (e.g., Primary Blue) */
-  color: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+:root {
+  --ink: #1c2540;
+  --ink-soft: #2a3556;
+  --ink-line: #3a4670;
+  --paper: #eef1f6;
+  --card: #ffffff;
+  --rule: #d5dbe8;
+  --text: #1c2540;
+  --muted: #5d6784;
+  --on-ink: #eef1f8;
+  --on-ink-muted: #a3adc9;
+  --highlight: #ffe066;
+  --highlight-deep: #f2c80f;
+  --ok: #1d7a55;
+  --ok-bg: #d9f1e5;
+  --err: #a3231c;
+  --err-bg: #fbe0dd;
+
+  --font-ui: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-read: "Newsreader", Georgia, "Times New Roman", serif;
 }
 
-/* Hover Effect: Lifts slightly and enhances shadow */
-.modern-btn:hover {
-  filter: brightness(1.1); /* Automatically shifts your base color slightly lighter */
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* Active/Press Effect: Compresses back down */
-.modern-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  filter: brightness(0.95); /* Slightly darkens on click */
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
 
-/* Disabled State */
-.modern-btn:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-  filter: none;
+body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  height: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--highlight-deep);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
